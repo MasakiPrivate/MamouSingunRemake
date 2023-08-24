@@ -45,6 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af620249174327741a32b1bbe39263df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _characterData: {fileID: 0}
+  _overrideSprite: {fileID: 4571662606808642803}
 --- !u!1 &3658186558141564021
 GameObject:
   m_ObjectHideFlags: 0
