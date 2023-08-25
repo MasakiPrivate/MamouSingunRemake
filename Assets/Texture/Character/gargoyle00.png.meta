@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0c5e9d59ae21f7a4a995606c26cbf82d
+guid: 2d28e6d8585bc463bb418d0989998936
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,7 +136,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: enemy200_0
+      name: gargoyle00_0
       rect:
         serializedVersion: 2
         x: 0
@@ -150,14 +150,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc3c330ed59f24114a100cb74ee92ab8
-      internalID: -1147273884
+      spriteID: 5b726a2ed1e8b4123b279d6d7b1deb64
+      internalID: 1076135412
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy200_1
+      name: gargoyle00_1
       rect:
         serializedVersion: 2
         x: 48
@@ -171,14 +171,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2cf76b3781dae48dcb49941e236e12a0
-      internalID: 1344290332
+      spriteID: 1b32247eb48974194bf24fc9f623a226
+      internalID: -736304915
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy200_2
+      name: gargoyle00_2
       rect:
         serializedVersion: 2
         x: 96
@@ -192,14 +192,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74ce787ec193248da9ad110c3b250162
-      internalID: -1516236418
+      spriteID: 5374301385a7643dc8ab8acecd32067c
+      internalID: 934721241
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy200_3
+      name: gargoyle00_3
       rect:
         serializedVersion: 2
         x: 144
@@ -213,14 +213,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74bb3fdf586d04344b8968b495a03513
-      internalID: 937859667
+      spriteID: d717c974184fb4ea495c30ad72461e20
+      internalID: 937956571
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy200_4
+      name: gargoyle00_4
       rect:
         serializedVersion: 2
         x: 0
@@ -234,14 +234,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5d2c12a80ea44003a5ab590f0605e3a
-      internalID: -1125616078
+      spriteID: efc25555207f84acbb60dc6d36af7c19
+      internalID: -1187828864
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy200_5
+      name: gargoyle00_5
       rect:
         serializedVersion: 2
         x: 48
@@ -255,14 +255,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 723958171420146bb9447e270e786a36
-      internalID: -1479472331
+      spriteID: ef0e9410709b54f8d9db6d6ff15b3033
+      internalID: 493649839
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy200_6
+      name: gargoyle00_6
       rect:
         serializedVersion: 2
         x: 96
@@ -276,14 +276,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5279cff1dcdfd4919b905defdfb4bf86
-      internalID: 1358945852
+      spriteID: 3bf2d518c9fe341eaa454afc839f08d6
+      internalID: -810795303
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy200_7
+      name: gargoyle00_7
       rect:
         serializedVersion: 2
         x: 144
@@ -297,56 +297,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64b158ccfec0b44a89de783c77ba370a
-      internalID: -1535734650
+      spriteID: 451e93e03c56c47ac89f365ee9bd5f1f
+      internalID: -1231276811
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy200_8
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 48
-        width: 48
-        height: 48
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 63c430c21a567475385c614d981e2dc9
-      internalID: 512936921
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy200_9
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 48
-        width: 48
-        height: 48
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ebdb669929e43412697c769ad0eb58fa
-      internalID: 1418310023
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy200_10
+      name: gargoyle00_10
       rect:
         serializedVersion: 2
         x: 0
@@ -360,71 +318,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 675810643aaea45bc93fd77df63263a8
-      internalID: -1308683634
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy200_11
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 48
-        height: 48
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 09d2e20db769e40859de007291622aea
-      internalID: -2131575573
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy200_12
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 48
-        height: 48
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: efb231db7d54b459faadc29a204b5162
-      internalID: -440020696
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy200_13
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 0
-        width: 48
-        height: 48
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e731df594105345efb0bbd7e27d09228
-      internalID: -1756569085
+      spriteID: 5cd58e5c97d7148099d15fba79e9bc19
+      internalID: 2014322970
       vertices: []
       indices: 
       edges: []
@@ -432,7 +327,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: e79152db6615a4ca492eb0374e778f81
     internalID: 0
     vertices: []
     indices: 
@@ -440,20 +335,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      enemy200_0: -1147273884
-      enemy200_1: 1344290332
-      enemy200_10: -1308683634
-      enemy200_11: -2131575573
-      enemy200_12: -440020696
-      enemy200_13: -1756569085
-      enemy200_2: -1516236418
-      enemy200_3: 937859667
-      enemy200_4: -1125616078
-      enemy200_5: -1479472331
-      enemy200_6: 1358945852
-      enemy200_7: -1535734650
-      enemy200_8: 512936921
-      enemy200_9: 1418310023
+      gargoyle00_0: 1076135412
+      gargoyle00_1: -736304915
+      gargoyle00_10: 2014322970
+      gargoyle00_2: 934721241
+      gargoyle00_3: 937956571
+      gargoyle00_4: -1187828864
+      gargoyle00_5: 493649839
+      gargoyle00_6: -810795303
+      gargoyle00_7: -1231276811
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

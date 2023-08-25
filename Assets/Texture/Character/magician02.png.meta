@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0c5e9d59ae21f7a4a995606c26cbf82d
+guid: 8d5807fdfcf404b7cabd4a9f1848d1a8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,7 +136,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: enemy200_0
+      name: magician02_0
       rect:
         serializedVersion: 2
         x: 0
@@ -150,14 +150,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc3c330ed59f24114a100cb74ee92ab8
-      internalID: -1147273884
+      spriteID: b9f536ab3ea8a444fb96233cb2742da8
+      internalID: 44010300
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy200_1
+      name: magician02_1
       rect:
         serializedVersion: 2
         x: 48
@@ -171,14 +171,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2cf76b3781dae48dcb49941e236e12a0
-      internalID: 1344290332
+      spriteID: 937253f9b529740689d47d9e5ec7939b
+      internalID: -761300413
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy200_2
+      name: magician02_2
       rect:
         serializedVersion: 2
         x: 96
@@ -192,14 +192,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74ce787ec193248da9ad110c3b250162
-      internalID: -1516236418
+      spriteID: 4b313c8c4c31a4f68ab6e266db9267b5
+      internalID: 1255686293
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy200_3
+      name: magician02_3
       rect:
         serializedVersion: 2
         x: 144
@@ -213,14 +213,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74bb3fdf586d04344b8968b495a03513
-      internalID: 937859667
+      spriteID: d538389ff49334ef8b122da6ab21d0c8
+      internalID: 331368244
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy200_4
+      name: magician02_4
       rect:
         serializedVersion: 2
         x: 0
@@ -234,14 +234,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5d2c12a80ea44003a5ab590f0605e3a
-      internalID: -1125616078
+      spriteID: e512998c1b38643f39d2c0006c0d2be0
+      internalID: -2054708738
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy200_5
+      name: magician02_5
       rect:
         serializedVersion: 2
         x: 48
@@ -255,14 +255,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 723958171420146bb9447e270e786a36
-      internalID: -1479472331
+      spriteID: 49ad6ec5f8bca443b88a60a7cb1c9345
+      internalID: 1390918664
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy200_6
+      name: magician02_6
       rect:
         serializedVersion: 2
         x: 96
@@ -276,14 +276,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5279cff1dcdfd4919b905defdfb4bf86
-      internalID: 1358945852
+      spriteID: f905b0854c41d42b7a8e7d210a3e274c
+      internalID: -1142894980
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy200_7
+      name: magician02_7
       rect:
         serializedVersion: 2
         x: 144
@@ -297,56 +297,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64b158ccfec0b44a89de783c77ba370a
-      internalID: -1535734650
+      spriteID: 539b09bb2576943b4ba456df9757aa9b
+      internalID: 1661543278
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy200_8
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 48
-        width: 48
-        height: 48
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 63c430c21a567475385c614d981e2dc9
-      internalID: 512936921
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy200_9
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 48
-        width: 48
-        height: 48
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ebdb669929e43412697c769ad0eb58fa
-      internalID: 1418310023
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy200_10
+      name: magician02_8
       rect:
         serializedVersion: 2
         x: 0
@@ -360,71 +318,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 675810643aaea45bc93fd77df63263a8
-      internalID: -1308683634
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy200_11
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 48
-        height: 48
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 09d2e20db769e40859de007291622aea
-      internalID: -2131575573
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy200_12
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 48
-        height: 48
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: efb231db7d54b459faadc29a204b5162
-      internalID: -440020696
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy200_13
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 0
-        width: 48
-        height: 48
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e731df594105345efb0bbd7e27d09228
-      internalID: -1756569085
+      spriteID: f197418a9b9834392b1a05472e4217c6
+      internalID: 140125746
       vertices: []
       indices: 
       edges: []
@@ -432,7 +327,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: ff6017ee1b8874db8abbefd0141ee371
     internalID: 0
     vertices: []
     indices: 
@@ -440,20 +335,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      enemy200_0: -1147273884
-      enemy200_1: 1344290332
-      enemy200_10: -1308683634
-      enemy200_11: -2131575573
-      enemy200_12: -440020696
-      enemy200_13: -1756569085
-      enemy200_2: -1516236418
-      enemy200_3: 937859667
-      enemy200_4: -1125616078
-      enemy200_5: -1479472331
-      enemy200_6: 1358945852
-      enemy200_7: -1535734650
-      enemy200_8: 512936921
-      enemy200_9: 1418310023
+      magician02_0: 44010300
+      magician02_1: -761300413
+      magician02_2: 1255686293
+      magician02_3: 331368244
+      magician02_4: -2054708738
+      magician02_5: 1390918664
+      magician02_6: -1142894980
+      magician02_7: 1661543278
+      magician02_8: 140125746
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0c5e9d59ae21f7a4a995606c26cbf82d
+guid: 1c03ab46ca18a4bf682d33330b0d0cdd
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,7 +136,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: enemy200_0
+      name: zombie01_0
       rect:
         serializedVersion: 2
         x: 0
@@ -150,14 +150,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc3c330ed59f24114a100cb74ee92ab8
-      internalID: -1147273884
+      spriteID: f6e8d648c71c340d580be6963f1ec75e
+      internalID: 1167805485
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy200_1
+      name: zombie01_1
       rect:
         serializedVersion: 2
         x: 48
@@ -171,14 +171,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2cf76b3781dae48dcb49941e236e12a0
-      internalID: 1344290332
+      spriteID: 6424315ab322f4affa43f42fa43004db
+      internalID: 1347610060
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy200_2
+      name: zombie01_2
       rect:
         serializedVersion: 2
         x: 96
@@ -192,14 +192,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74ce787ec193248da9ad110c3b250162
-      internalID: -1516236418
+      spriteID: f3e1a454efd474b2a82562bbd6eced02
+      internalID: 2142789994
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy200_3
+      name: zombie01_3
       rect:
         serializedVersion: 2
         x: 144
@@ -213,14 +213,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74bb3fdf586d04344b8968b495a03513
-      internalID: 937859667
+      spriteID: afa47b92f3dba4cb2a2cdae413b46698
+      internalID: -134067650
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy200_4
+      name: zombie01_4
       rect:
         serializedVersion: 2
         x: 0
@@ -234,14 +234,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5d2c12a80ea44003a5ab590f0605e3a
-      internalID: -1125616078
+      spriteID: 5d8dd793febef4a44afee2920591f1e3
+      internalID: 624483914
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy200_5
+      name: zombie01_5
       rect:
         serializedVersion: 2
         x: 48
@@ -255,14 +255,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 723958171420146bb9447e270e786a36
-      internalID: -1479472331
+      spriteID: 40af675ce5bbb458da2e2f3372e5aa84
+      internalID: -552466396
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy200_6
+      name: zombie01_6
       rect:
         serializedVersion: 2
         x: 96
@@ -276,14 +276,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5279cff1dcdfd4919b905defdfb4bf86
-      internalID: 1358945852
+      spriteID: bdae46d0e543d4b03a52252ae96c0c12
+      internalID: 1561930888
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy200_7
+      name: zombie01_7
       rect:
         serializedVersion: 2
         x: 144
@@ -297,14 +297,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64b158ccfec0b44a89de783c77ba370a
-      internalID: -1535734650
+      spriteID: d9fcd6e598d694596beef556a1cd9b0f
+      internalID: -347884332
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy200_8
+      name: zombie01_8
       rect:
         serializedVersion: 2
         x: 0
@@ -318,14 +318,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63c430c21a567475385c614d981e2dc9
-      internalID: 512936921
+      spriteID: d12b5c2c71ea941578cb405541481352
+      internalID: 449934793
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy200_9
+      name: zombie01_9
       rect:
         serializedVersion: 2
         x: 48
@@ -339,14 +339,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ebdb669929e43412697c769ad0eb58fa
-      internalID: 1418310023
+      spriteID: c9d22b98864fc4a8aaf78171cfa1ca14
+      internalID: 1272077690
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy200_10
+      name: zombie01_10
       rect:
         serializedVersion: 2
         x: 0
@@ -360,71 +360,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 675810643aaea45bc93fd77df63263a8
-      internalID: -1308683634
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy200_11
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 48
-        height: 48
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 09d2e20db769e40859de007291622aea
-      internalID: -2131575573
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy200_12
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 48
-        height: 48
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: efb231db7d54b459faadc29a204b5162
-      internalID: -440020696
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy200_13
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 0
-        width: 48
-        height: 48
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e731df594105345efb0bbd7e27d09228
-      internalID: -1756569085
+      spriteID: c9cf58fc966ce436e898d484c8fde125
+      internalID: -1193694577
       vertices: []
       indices: 
       edges: []
@@ -432,7 +369,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 38f8ed40b21ca4ddda45482616718cb9
     internalID: 0
     vertices: []
     indices: 
@@ -440,20 +377,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      enemy200_0: -1147273884
-      enemy200_1: 1344290332
-      enemy200_10: -1308683634
-      enemy200_11: -2131575573
-      enemy200_12: -440020696
-      enemy200_13: -1756569085
-      enemy200_2: -1516236418
-      enemy200_3: 937859667
-      enemy200_4: -1125616078
-      enemy200_5: -1479472331
-      enemy200_6: 1358945852
-      enemy200_7: -1535734650
-      enemy200_8: 512936921
-      enemy200_9: 1418310023
+      zombie01_0: 1167805485
+      zombie01_1: 1347610060
+      zombie01_10: -1193694577
+      zombie01_2: 2142789994
+      zombie01_3: -134067650
+      zombie01_4: 624483914
+      zombie01_5: -552466396
+      zombie01_6: 1561930888
+      zombie01_7: -347884332
+      zombie01_8: 449934793
+      zombie01_9: 1272077690
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

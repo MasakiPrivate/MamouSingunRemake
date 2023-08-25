@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0c5e9d59ae21f7a4a995606c26cbf82d
+guid: f7b793e937dd64d9ab6c1c21b1dddef9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,7 +136,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: enemy200_0
+      name: dragon00_0
       rect:
         serializedVersion: 2
         x: 0
@@ -150,14 +150,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc3c330ed59f24114a100cb74ee92ab8
-      internalID: -1147273884
+      spriteID: 853673cc047994d9ba9281d1bca6d423
+      internalID: -1855961188
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy200_1
+      name: dragon00_1
       rect:
         serializedVersion: 2
         x: 48
@@ -171,14 +171,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2cf76b3781dae48dcb49941e236e12a0
-      internalID: 1344290332
+      spriteID: a8fd923c246cf49df8dd25ea4c39b57d
+      internalID: -221252665
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy200_2
+      name: dragon00_2
       rect:
         serializedVersion: 2
         x: 96
@@ -192,14 +192,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74ce787ec193248da9ad110c3b250162
-      internalID: -1516236418
+      spriteID: 91c246bdaa9d94db88785d411aeee828
+      internalID: -2090226802
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy200_3
+      name: dragon00_3
       rect:
         serializedVersion: 2
         x: 144
@@ -213,14 +213,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74bb3fdf586d04344b8968b495a03513
-      internalID: 937859667
+      spriteID: ed98fd0af033c4ea3a77aa002a5e9560
+      internalID: -1810928324
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy200_4
+      name: dragon00_4
       rect:
         serializedVersion: 2
         x: 0
@@ -234,14 +234,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5d2c12a80ea44003a5ab590f0605e3a
-      internalID: -1125616078
+      spriteID: e753e5ca5f85d4e4888cfa40bcc53644
+      internalID: 1992160056
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy200_5
+      name: dragon00_5
       rect:
         serializedVersion: 2
         x: 48
@@ -255,14 +255,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 723958171420146bb9447e270e786a36
-      internalID: -1479472331
+      spriteID: 98b4e86e2bdb244d588a7548347c31da
+      internalID: -44212283
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy200_6
+      name: dragon00_6
       rect:
         serializedVersion: 2
         x: 96
@@ -276,14 +276,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5279cff1dcdfd4919b905defdfb4bf86
-      internalID: 1358945852
+      spriteID: 409b0b5d91131497682ee7630bd18a23
+      internalID: 2078291507
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy200_7
+      name: dragon00_7
       rect:
         serializedVersion: 2
         x: 144
@@ -297,14 +297,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64b158ccfec0b44a89de783c77ba370a
-      internalID: -1535734650
+      spriteID: 69555a1d8bbf44070ad72c6cfe5fa45b
+      internalID: -2075379687
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy200_8
+      name: dragon00_8
       rect:
         serializedVersion: 2
         x: 0
@@ -318,14 +318,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63c430c21a567475385c614d981e2dc9
-      internalID: 512936921
+      spriteID: bfbfef25322d6451c9acd341662908e4
+      internalID: 1676740950
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy200_9
+      name: dragon00_9
       rect:
         serializedVersion: 2
         x: 48
@@ -339,14 +339,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ebdb669929e43412697c769ad0eb58fa
-      internalID: 1418310023
+      spriteID: e1f009def817c408db49f8db2683e265
+      internalID: -1415344950
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy200_10
+      name: dragon00_10
       rect:
         serializedVersion: 2
         x: 0
@@ -360,71 +360,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 675810643aaea45bc93fd77df63263a8
-      internalID: -1308683634
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy200_11
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 48
-        height: 48
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 09d2e20db769e40859de007291622aea
-      internalID: -2131575573
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy200_12
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 48
-        height: 48
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: efb231db7d54b459faadc29a204b5162
-      internalID: -440020696
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy200_13
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 0
-        width: 48
-        height: 48
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e731df594105345efb0bbd7e27d09228
-      internalID: -1756569085
+      spriteID: ca8d8428d92ef4e0d8fd60368ae54312
+      internalID: -1658680696
       vertices: []
       indices: 
       edges: []
@@ -432,7 +369,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: d91a9400a719649bab5f6380e69c073f
     internalID: 0
     vertices: []
     indices: 
@@ -440,20 +377,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      enemy200_0: -1147273884
-      enemy200_1: 1344290332
-      enemy200_10: -1308683634
-      enemy200_11: -2131575573
-      enemy200_12: -440020696
-      enemy200_13: -1756569085
-      enemy200_2: -1516236418
-      enemy200_3: 937859667
-      enemy200_4: -1125616078
-      enemy200_5: -1479472331
-      enemy200_6: 1358945852
-      enemy200_7: -1535734650
-      enemy200_8: 512936921
-      enemy200_9: 1418310023
+      dragon00_0: -1855961188
+      dragon00_1: -221252665
+      dragon00_10: -1658680696
+      dragon00_2: -2090226802
+      dragon00_3: -1810928324
+      dragon00_4: 1992160056
+      dragon00_5: -44212283
+      dragon00_6: 2078291507
+      dragon00_7: -2075379687
+      dragon00_8: 1676740950
+      dragon00_9: -1415344950
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
