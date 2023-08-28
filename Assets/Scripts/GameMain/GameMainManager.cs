@@ -2,6 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+public enum GameMode
+{
+    title,
+    inGame,
+    stageSelect,
+    evolution,
+    edit
+}
+
 public class GameMainManager : MonoBehaviour
 {
     // ---------- 定数宣言 ----------
@@ -14,7 +24,7 @@ public class GameMainManager : MonoBehaviour
     // ---------- Unity組込関数 ----------
     void Start()
     {
-        
+        _inGameManager.Initialize();
     }
 
     void Update()

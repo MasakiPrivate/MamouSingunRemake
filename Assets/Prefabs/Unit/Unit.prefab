@@ -26,9 +26,9 @@ Transform:
   m_GameObject: {fileID: 3658186556624019649}
   serializedVersion: 2
   m_LocalRotation: {x: -1.7462297e-10, y: -0, z: 4.6566123e-10, w: 1}
-  m_LocalPosition: {x: -1.2, y: -0.25, z: 1.7}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3658186558141564018}
   m_Father: {fileID: 0}
@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _characterData: {fileID: 0}
   _overrideSprite: {fileID: 4571662606808642803}
+  _animator: {fileID: 3658186558141564016}
 --- !u!1 &3658186558141564021
 GameObject:
   m_ObjectHideFlags: 0
@@ -76,9 +77,9 @@ Transform:
   m_GameObject: {fileID: 3658186558141564021}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -6.4623478e-27, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0, z: -0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: -0.33, y: -0, z: -0}
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3658186556624019678}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

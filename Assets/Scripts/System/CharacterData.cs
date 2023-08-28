@@ -29,7 +29,7 @@ public class CharacterData : ScriptableObject {
 	public int shot_flg;            // 使用する射撃弾
 	public bool isWideAtk;          // 複数攻撃
     public bool isDoubleAtk;        // ２段攻撃
-    public int range;               // 射程
+    public float range;               // 射程
     public Anti anti;                // 対地or対空or対両方
     public float spd;                 // 移動速度
     public bool isFly;              // 飛行

@@ -105,7 +105,7 @@ public class CsvImpoterEditor : Editor {
             // 射程
             column += 1;
             value = TrimString(parseByComma[column]);
-            characterData.range = int.Parse(value);
+            characterData.range = float.Parse(value);
             
             // 対地or対空or対両方
             column += 1;
