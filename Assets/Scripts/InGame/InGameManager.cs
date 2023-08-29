@@ -7,7 +7,8 @@ public class InGameManager : MonoBehaviour
     // ---------- 定数宣言 ----------
     public const int PLAYER_UNIT_MAX_NUM = 100; //プレイヤーキャラクターの一度に出撃できる最大体数
     public const int ENEMY_UNIT_MAX_NUM = 100;  //敵キャラクターの一度に出撃できる最大体数
-    
+    public const float ALLY_CHARACTER_START_POS_X = 3.0f;
+    public const float ENEMY_CHARACTER_START_POS_X = 19.0f;
     // ---------- ゲームオブジェクト参照変数宣言 ----------
     // ---------- プレハブ ----------
     [SerializeField, Tooltip("キャラクタープレハブ")] private Character _characterPrefab;
@@ -48,12 +49,24 @@ public class InGameManager : MonoBehaviour
         }
         Character character = Instantiate(_characterPrefab);
         character.transform.parent = _battleField;
+
+        // 初期位置設定
+        character.transform.localPosition = Vector3.zero;
         character.SetUp(characterData, isAlly, fpos_z);
 
+        // 敵か味方かで処理が変わる
         if(isAlly)
-            _allyCharacterList.Add(character);
+        {   
+            character.transform.Translate(ALLY_CHARACTER_START_POS_X, 0, 0);    // 初期位置設定
+            character.SetGetTargetCharacterListFunc(()=>{ return _enemyCharacterList; }); // 敵テーブルを返す
+            _allyCharacterList.Add(character);                                  // 味方テーブルに登録
+        }
         else
-            _enemyCharacterList.Add(character);
+        {
+            character.transform.Translate(ENEMY_CHARACTER_START_POS_X, 0, 0);    // 初期位置設定
+            character.SetGetTargetCharacterListFunc(()=>{ return _allyCharacterList; }); // 味方テーブルを返す
+            _enemyCharacterList.Add(character);                                  // 敵テーブルに登録
+        }
     }
 
     public List<Character> GetAllyCharacterList() { return _allyCharacterList; }

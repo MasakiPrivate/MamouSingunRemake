@@ -48,6 +48,7 @@ MonoBehaviour:
   _characterData: {fileID: 0}
   _overrideSprite: {fileID: 4571662606808642803}
   _animator: {fileID: 3658186558141564016}
+  _AnimationEvents: {fileID: 1820788235925744687}
 --- !u!1 &3658186558141564021
 GameObject:
   m_ObjectHideFlags: 0
@@ -61,6 +62,7 @@ GameObject:
   - component: {fileID: 3658186558141564016}
   - component: {fileID: 3658186558141564017}
   - component: {fileID: 4571662606808642803}
+  - component: {fileID: 1820788235925744687}
   m_Layer: 0
   m_Name: sprite
   m_TagString: Untagged
@@ -77,7 +79,7 @@ Transform:
   m_GameObject: {fileID: 3658186558141564021}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -6.4623478e-27, z: -0, w: 1}
-  m_LocalPosition: {x: -0.33, y: -0, z: -0}
+  m_LocalPosition: {x: -0.5, y: -0, z: -0}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -181,3 +183,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   texture: {fileID: 2800000, guid: 911a7e8a48d3b724387d713b624eb6c5, type: 3}
+--- !u!114 &1820788235925744687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3658186558141564021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b2ccef144201de4f8b0919187f10845, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

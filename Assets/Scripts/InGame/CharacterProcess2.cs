@@ -30,20 +30,17 @@ public class CharacterProcess2 : MonoBehaviour
     private void FixedUpdateCharacter(Character character)
     {
         float spd = character.GetSPD();
-        characterAction action = character.GetAction();
-
-        //攻撃クールタイムを減らす
-        character.UpdateAtkCoolTImeCounter();
+        CharacterAction action = character.GetCurrentAction();
 
         // 逃げ足は速い
-        if( action == characterAction.run)
+        if( action == CharacterAction.run)
             spd = character.GetSPD() + 2.0f * character.GetAwayCorrection();
         // 向きが逆なら移動も逆に
         if(character.transform.localScale.x < 0)
             spd *= -1.0f;
 
         // 移動
-        if(action == characterAction.walk || action == characterAction.run)
+        if(action == CharacterAction.walk || action == CharacterAction.run)
         {
             character.transform.Translate(spd, 0, 0);
         }

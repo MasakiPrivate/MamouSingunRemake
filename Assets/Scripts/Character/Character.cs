@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 
-
-public enum characterAction
+public enum CharacterAction
 {
     walk,
     attack,
@@ -25,6 +25,7 @@ public class Character : MonoBehaviour
     [SerializeField, Tooltip("キャラクターデータ")] private CharacterData _characterData = default;
     [SerializeField, Tooltip("画像上書き")] private OverrideSprite _overrideSprite = default;
     [SerializeField, Tooltip("アニメーション")] private Animator _animator = default;
+    [SerializeField, Tooltip("アニメーションコールバック")] private CharacterAnimationEvents _AnimationEvents;
     // ---------- プロパティ ----------
     private string _characterName;    // 名前
     private Texture _texture;          // テクスチャ
@@ -47,8 +48,12 @@ public class Character : MonoBehaviour
     private int _dieAction;           // 死亡アクション
     private Ability _abiliry;         // 能力
     private bool _isAlly = true;
-    private characterAction _action;    // 行動
+    private CharacterAction _action;    // 行動
     private bool _isInitialize = false;
+    private bool _isDamage = false;     // ダメージを受けたフラグ
+    private int _beforeHp = 0;          // 直前のHP
+    private bool _isAttack = false;     // 攻撃判定を出したフラグ
+    private Func<List<Character>> _getTargetCharacterListFunc = default;
     // ---------- クラス変数宣言 ----------
     // ---------- インスタンス変数宣言 ----------
     // ---------- Unity組込関数 ----------
@@ -56,6 +61,21 @@ public class Character : MonoBehaviour
     {
         if(_isInitialize)
             SetUp(_characterData, _isAlly, 0);
+
+        _AnimationEvents.SetOnDoudleAttack(()=>
+        {
+            if(_isDoubleAtk)
+                _isAttack = true;
+        });
+        _AnimationEvents.SetOnAttack(()=>
+        {
+            _isAttack = true;
+            _atkCoolTImeCounter = _atkCoolTIme;
+        });
+        _AnimationEvents.SetOnAttackEnd(()=>
+        {
+            ChangeAction(CharacterAction.stand);
+        });
     }
     // ---------- Public関数 ----------
     //　セットアップ
@@ -63,7 +83,7 @@ public class Character : MonoBehaviour
     {
         // 奥行に多少のばらつきを持たせる
         if(fpos_z == -1)
-            fpos_z = Random.Range(0, 0.02f);
+            fpos_z = UnityEngine.Random.Range(0, 0.02f);
         transform.Translate(0, -fpos_z, -fpos_z);
 
         // データチェック
@@ -110,60 +130,92 @@ public class Character : MonoBehaviour
         _dieAction          = _characterData.dieAction;         // 死亡アクション
         _abiliry            = _characterData.abiliry;           // 能力
 
-        ChangeAction(characterAction.walk);
+        ChangeAction(CharacterAction.walk);
 
         _isInitialize = true;
         return this;
     }
 
     // アクション変更
-    public void ChangeAction(characterAction action)
+    public void ChangeAction(CharacterAction action)
     {
-        // _animator
+        if(_action == action)
+            return;
+
+        _action = action;
         foreach(string animParamin in character_anim_parameter)
         {
             _animator.SetBool(animParamin, false);
         }
         switch(action)
         {
-            case characterAction.walk:
+            case CharacterAction.walk:
+                // 水の上で、自分が水の上だと歩けないなら棒立ちさせる
+
                 _animator.SetBool("Walk", true);
                 break;
-            case characterAction.attack:
+            case CharacterAction.attack:
                 _animator.SetBool("Attack", true);
                 break;
-            case characterAction.stand:
+            case CharacterAction.stand:
                 if(!_isFloat)
                     _animator.SetBool("Stand", true);
                 else
                     _animator.SetBool("Walk", true);
                 break;
-            case characterAction.damage:
+            case CharacterAction.damage:
                 _animator.SetBool("Damage", true);
                 break;
-            case characterAction.run:
+            case CharacterAction.run:
                 _animator.SetBool("Run", true);
                 break;
-            case characterAction.dead:
+            case CharacterAction.dead:
                 _animator.SetBool("Dead", true);
                 break;
             //　死んで消えるアクション
-            case characterAction.vanish:
+            case CharacterAction.vanish:
                 _animator.SetBool("Damage", true);
                 break;
         }
     }
 
     public float GetSPD(){ return _spd; }
-    public characterAction GetAction(){ return _action; }
+    public CharacterAction GetCurrentAction(){ return _action; }
     public float GetAwayCorrection(){ return AWAY_CORRECTION; }
+    //攻撃クールタイムを減らす
     public void UpdateAtkCoolTImeCounter()
     {
-        //攻撃クールタイムを減らす
         _atkCoolTImeCounter--;
         if(_atkCoolTImeCounter <= 0)
             _atkCoolTImeCounter = 0;
     }
+    // 攻撃クールタイムがなくなっているか
+    public bool isZeroAtkCoolTImeCounter()
+    {
+        if(_atkCoolTImeCounter <= 0)
+            return true;
+        return false;
+    }
+    // 「直前のHP」更新
+    public void UpdateBeforeHP(){ _beforeHp = _hp; }
+    // 「直前のHP」を返す
+    public int GetBeforeHP(){ return _beforeHp; }
+    // 「ダメージを受けたフラグ」更新
+    public void UpdateIsDamage(){ _isDamage = false; }
+    // 「ダメージを受けたフラグ」を返す
+    public bool GetIsDamage(){ return _isDamage; }
+    // 相手キャラクターのテーブルを返す
+    public List<Character> GetTargetTable(){ return _getTargetCharacterListFunc(); }
+    public void SetGetTargetCharacterListFunc(Func<List<Character>> func)
+    {
+        _getTargetCharacterListFunc = func;
+    }
+    public bool IsAlly(){ return _isAlly; }
+    // 攻撃層（対地、対空、対両方）を取得
+    public Anti GetAnti(){ return _anti; }
+    // 射程を取得
+    public float GetRange(){ return _range; }
+    public bool IsFly(){ return _isFly; }
     // ---------- Private関数 ----------
     // ---------- protected関数 ----------
 }

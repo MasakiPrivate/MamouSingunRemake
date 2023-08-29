@@ -31,6 +31,4 @@ public class CharacterProcess3 : MonoBehaviour
     {
         
     }
-    // ---------- Public関数 ----------
-    // ---------- Private関数 ----------
 }
