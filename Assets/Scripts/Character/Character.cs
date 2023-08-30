@@ -19,6 +19,7 @@ public class Character : MonoBehaviour
 {
     // ---------- 定数宣言 ----------
     private const float AWAY_CORRECTION = 0.0225f;
+    private const float KNOCK_BACK_ADD_X = -0.5f;
     private string[] character_anim_parameter = {"Attack", "Walk", "Stand", "Damage", "Run", "Dead"};
     // ---------- ゲームオブジェクト参照変数宣言 ----------
     // ---------- プレハブ ----------
@@ -34,7 +35,7 @@ public class Character : MonoBehaviour
     private int _atk;                 // 攻撃力
     private int _atkCoolTIme;         // 攻撃のクールタイム
     private int _atkCoolTImeCounter;  // 攻撃のクールタイムカウンター
-    private int _shot_flg;            // 使用する射撃弾
+    private CharacterShot _shot_flg;            // 使用する射撃弾
     private bool _isWideAtk;          // 複数攻撃
     private bool _isDoubleAtk;        // ２段攻撃
     private float _range;             // 射程
@@ -53,6 +54,7 @@ public class Character : MonoBehaviour
     private bool _isDamage = false;     // ダメージを受けたフラグ
     private int _beforeHp = 0;          // 直前のHP
     private bool _isAttack = false;     // 攻撃判定を出したフラグ
+    private bool _isKnockBack = false;  // ノックバック予定フラグ
     private Func<List<Character>> _getTargetCharacterListFunc = default;
     // ---------- クラス変数宣言 ----------
     // ---------- インスタンス変数宣言 ----------
@@ -69,6 +71,7 @@ public class Character : MonoBehaviour
         });
         _AnimationEvents.SetOnAttack(()=>
         {
+            // 攻撃！
             _isAttack = true;
             _atkCoolTImeCounter = _atkCoolTIme;
         });
@@ -91,7 +94,6 @@ public class Character : MonoBehaviour
             _characterData = characterData;
         if(_characterData == null)
         {
-            Debug.Log("キャラクターデータがありません");
             return null;
         }
 
@@ -200,8 +202,14 @@ public class Character : MonoBehaviour
     public void UpdateBeforeHP(){ _beforeHp = _hp; }
     // 「直前のHP」を返す
     public int GetBeforeHP(){ return _beforeHp; }
+    //  今のHPを返す
+    public int GetHP(){ return _hp; }
+    //  HP更新
+    public void SetHP(int hp){ _hp = hp; }
+    //  攻撃力を返す
+    public int GetAtk(){ return _atk; }
     // 「ダメージを受けたフラグ」更新
-    public void UpdateIsDamage(){ _isDamage = false; }
+    public void SetIsDamage(bool isDamage){ _isDamage = isDamage; }
     // 「ダメージを受けたフラグ」を返す
     public bool GetIsDamage(){ return _isDamage; }
     // 相手キャラクターのテーブルを返す
@@ -211,11 +219,55 @@ public class Character : MonoBehaviour
         _getTargetCharacterListFunc = func;
     }
     public bool IsAlly(){ return _isAlly; }
-    // 攻撃層（対地、対空、対両方）を取得
+    // 攻撃層（対地、対空、対両方）を返す
     public Anti GetAnti(){ return _anti; }
-    // 射程を取得
+    // 射程を返す
     public float GetRange(){ return _range; }
     public bool IsFly(){ return _isFly; }
+    // 攻撃判定を出しているか
+    public bool IsAttack(){ return _isAttack; }
+    // 攻撃判定をおろす
+    public void UnAttack(){ _isAttack = false; }
+    // 複数攻撃フラグを返す
+    public bool IsWideAtk(){ return _isWideAtk; } 
+    // 攻撃時弾発射フラグを返す
+    public CharacterShot GetShot(){ return _shot_flg;}
+    // 弾発射
+    public void FireShot()
+    {
+
+    }
+
+    // 相手と自身の距離を求める
+    public float GetDistanceX(Character target)
+    {
+        float distance = transform.localPosition.x - target.transform.localPosition.x;
+        return Mathf.Abs(distance);
+    }
+
+    // 相手が自身の前方にいるかチェック　前方にいる：true、背後にいる：false
+    public bool CheckTargetIsFront(Character target)
+    {
+        float characterPosX = transform.localPosition.x;
+        float targetPosX = target.transform.localPosition.x;
+
+        // 味方の場合
+        if(_isAlly == true)
+        {
+            if(characterPosX <= targetPosX )
+                return true;
+            else
+                return false;
+        }
+        // 敵の場合
+        else
+        {
+            if(targetPosX <= characterPosX )
+                return true;
+            else
+                return false;
+        }
+    }
     // ---------- Private関数 ----------
     // ---------- protected関数 ----------
 }

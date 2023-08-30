@@ -60,7 +60,7 @@ public class CharacterProcess1 : MonoBehaviour
                 Character target = targetList[i];
 
                 // 自身の背後にいるなら無視
-                if(CheckTargetIsFront(character, target) == false)
+                if(character.CheckTargetIsFront(target) == false)
                     continue;
 
                 Anti anti = character.GetAnti();    // 自身の攻撃層を取得
@@ -71,7 +71,7 @@ public class CharacterProcess1 : MonoBehaviour
                     continue;
 
                 // 相手との距離を取得
-                float targetDistanceX = GetDistanceX(character, target);
+                float targetDistanceX = character.GetDistanceX(target);
                 // 自身の射程を取得
                 float range = character.GetRange();
 
@@ -82,13 +82,11 @@ public class CharacterProcess1 : MonoBehaviour
                 // そいつが射程内にいるか
                 if( targetDistanceX <= range )
                 {
-                    bool isFly = character.IsFly();     // 自身が飛行しているか
-
                     // 敵が射程内にいるフラグを立てる
                     isTargetInRange = true;
                     // 攻撃可能かチェック
                     // 自身が飛行しているなら攻撃可能
-                    if(isFly == true)
+                    if(character.IsFly() == true)
                     {
                         isCanAtk = true;
                     }
@@ -128,37 +126,6 @@ public class CharacterProcess1 : MonoBehaviour
         // 「直前のHP」更新
         character.UpdateBeforeHP();
         // 「ダメージを受けたフラグ」更新
-        character.UpdateIsDamage();
-    }
-
-    // 相手と自身の距離を求める
-    private float GetDistanceX(Character character, Character target)
-    {
-        float distance = character.transform.localPosition.x - target.transform.localPosition.x;
-        return Mathf.Abs(distance);
-    }
-
-    // 相手が自身の前方にいるかチェック　前方にいる：true、背後にいる：false
-    private bool CheckTargetIsFront(Character character, Character target)
-    {
-        float characterPosX = character.transform.localPosition.x;
-        float targetPosX = target.transform.localPosition.x;
-
-        // 味方の場合
-        if(character.IsAlly() == true)
-        {
-            if(characterPosX <= targetPosX )
-                return true;
-            else
-                return false;
-        }
-        // 敵の場合
-        else
-        {
-            if(targetPosX <= characterPosX )
-                return true;
-            else
-                return false;
-        }
+        character.SetIsDamage(false);
     }
 }

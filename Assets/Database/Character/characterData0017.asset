@@ -18,7 +18,7 @@ MonoBehaviour:
   summonCost: 190
   maxHp: 3000
   atk: 1000
-  atkCoolTIme: 150
+  atkCoolTIme: 300
   shot_flg: 3
   isWideAtk: 0
   isDoubleAtk: 0

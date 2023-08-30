@@ -90,7 +90,8 @@ public class CsvImpoterEditor : Editor {
             // 使用する射撃弾
             column += 1;
             value = TrimString(parseByComma[column]);
-            characterData.shot_flg = int.Parse(value);
+            int intShot = int.Parse(value);
+            characterData.shot_flg = (CharacterShot)Enum.ToObject(typeof(CharacterShot), intShot);
 
             // 複数攻撃
             column += 1;

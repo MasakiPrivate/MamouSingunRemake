@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum Shot
+public enum CharacterShot
 {
-    shotNone = -1,
-    shotSlime = 1,
-    shotWater = 2,
-    shotMagic = 3,
-    shotBigMagic = 4,
+    none = -1,
+    slime = 1,
+    water = 2,
+    magic = 3,
+    bigMagic = 4,
 }
 public enum Anti
 {
@@ -26,7 +26,7 @@ public class CharacterData : ScriptableObject {
 	public int maxHp;               // HP
 	public int atk;                 // 攻撃力
 	public int atkCoolTIme;         // 攻撃のクールタイム
-	public int shot_flg;            // 使用する射撃弾
+	public CharacterShot shot_flg;            // 使用する射撃弾
 	public bool isWideAtk;          // 複数攻撃
     public bool isDoubleAtk;        // ２段攻撃
     public float range;               // 射程

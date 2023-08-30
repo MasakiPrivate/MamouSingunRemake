@@ -24,6 +24,7 @@ public class GameMainManager : MonoBehaviour
     // ---------- Unity組込関数 ----------
     void Start()
     {
+        Application.targetFrameRate = 60;
         _inGameManager.Initialize();
     }
 
