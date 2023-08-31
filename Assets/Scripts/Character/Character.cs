@@ -232,6 +232,8 @@ public class Character : MonoBehaviour
     public bool IsWideAtk(){ return _isWideAtk; } 
     // 攻撃時弾発射フラグを返す
     public CharacterShot GetShot(){ return _shot_flg;}
+    public bool IsKnockBack(){ return _isKnockBack; }
+    public void SetIsKnockBack(bool isKnockBack){ _isKnockBack = isKnockBack; }
     // 弾発射
     public void FireShot()
     {

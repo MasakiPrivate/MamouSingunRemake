@@ -29,6 +29,9 @@ public class CharacterProcess4 : MonoBehaviour
     // ---------- Private関数 ----------
     private void UpdateCharacter(Character character)
     {
-        
+        int Hp = character.GetHP();
+        int beforeHp = character.GetBeforeHP();
+        bool isDamage = character.GetIsDamage();
+
     }
 }
