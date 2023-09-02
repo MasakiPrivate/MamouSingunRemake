@@ -13,15 +13,18 @@ public class CharacterAnimationEvents : MonoBehaviour
     private Action _onDoudleAttack = ()=>{};
     private Action _onAttack = ()=>{};
     private Action _onAttackEnd = ()=>{};
+    private Action _onDamageEnd = ()=>{};
     // ---------- インスタンス変数宣言 ----------
     // ---------- Unity組込関数 ----------
     // ---------- Public関数 ----------
     public void OnDoudleAttack(){ _onDoudleAttack(); }
     public void OnAttack(){ _onAttack(); }
     public void OnAttackEnd(){ _onAttackEnd(); }
+    public void OnDamageEnd(){ _onDamageEnd(); }
 
     public void SetOnDoudleAttack(Action action){ _onDoudleAttack = action; }
     public void SetOnAttack(Action action){ _onAttack = action; }
     public void SetOnAttackEnd(Action action){ _onAttackEnd = action; }
+    public void SetOnDamageEnd(Action action){ _onDamageEnd = action; }
     // ---------- Private関数 ----------
 }

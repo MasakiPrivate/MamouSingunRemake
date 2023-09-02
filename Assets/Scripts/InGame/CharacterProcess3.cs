@@ -40,7 +40,6 @@ public class CharacterProcess3 : MonoBehaviour
             character.FireShot();
             return;
         }
-
         // 単体攻撃用、一番近い敵を記録
         float target_min_range = -1.0f;
         Character deside_target = null;
@@ -64,7 +63,7 @@ public class CharacterProcess3 : MonoBehaviour
             // 自身の射程を取得
             float range = character.GetRange();
             // 射程外なら無視
-            if(targetDistanceX < range)
+            if(range < targetDistanceX)
                 continue;
 
             // 自身が地上の場合
@@ -75,17 +74,20 @@ public class CharacterProcess3 : MonoBehaviour
                 // 自分が対地で相手が飛行なら無視
                 if(anti == Anti.antiGround && isTargetFly == true )
                     continue;
+                    
                 // 自分が対空で相手が地上なら無視
                 if(anti == Anti.antiAir && isTargetFly == false )
                     continue;
+                    
             }
             // 自身の背後にいるなら無視
             if(character.CheckTargetIsFront(target) == false)
                 continue;
+                
             // 相手が怯み中なら無視
             if(target.GetCurrentAction() == CharacterAction.damage)
                 continue;
-            
+                
             // 単体攻撃なら一番距離の短い相手をターゲットにする
             if(character.IsWideAtk() == false)
             {
@@ -102,7 +104,6 @@ public class CharacterProcess3 : MonoBehaviour
                 isAttackHit = true;
             }
         }
-
         // 単体攻撃なら、ターゲットにした１体にダメージを与える
         if( character.IsWideAtk() == false && deside_target != null )
         {

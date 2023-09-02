@@ -143,7 +143,8 @@ public class CsvImpoterEditor : Editor {
             // 死亡アクション
             column += 1;
             value = TrimString(parseByComma[column]);
-            characterData.dieAction = int.Parse(value);
+            int intDieAction = int.Parse(value);
+            characterData.dieAction = (DieAction)Enum.ToObject(typeof(DieAction), intDieAction);
 
             // 購入コスト
             column += 1;

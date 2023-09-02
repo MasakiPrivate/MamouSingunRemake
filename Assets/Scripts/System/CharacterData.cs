@@ -16,6 +16,12 @@ public enum Anti
     antiAir = 2,
     antiBoth = 3
 }
+public enum DieAction
+{
+    vanish = 0,
+    run,
+    dead,
+}
 
 [CreateAssetMenu(menuName = "MyScriptable/Create CharacterData")]
 public class CharacterData : ScriptableObject {
@@ -36,7 +42,7 @@ public class CharacterData : ScriptableObject {
     public bool isFloat;            // 浮き。棒立ち時に歩きのアニメーションをさせるか
     public int waterSpd;            // 水辺での速度
     public int kbNum;               // ノックバック数
-    public int dieAction;           // 死亡アクション
+    public DieAction dieAction;     // 死亡アクション
     public int buyCost;             // 購入コスト
     public string description;      // 説明
     public Ability abiliry;         // 能力

@@ -19,7 +19,8 @@ public class Character : MonoBehaviour
 {
     // ---------- 定数宣言 ----------
     private const float AWAY_CORRECTION = 0.0225f;
-    private const float KNOCK_BACK_ADD_X = -0.5f;
+    private const float KNOCK_BACK_VEC_X = -5f;
+    private const float KNOCK_BACK_ADD_X = 0.2f;
     private string[] character_anim_parameter = {"Attack", "Walk", "Stand", "Damage", "Run", "Dead"};
     // ---------- ゲームオブジェクト参照変数宣言 ----------
     // ---------- プレハブ ----------
@@ -46,7 +47,7 @@ public class Character : MonoBehaviour
     private int _waterSpd;            // 水辺での速度
     private int _kbNum;               // ノックバック数
     private int _kbNumCounter;        // ノックバック数カウンター
-    private int _dieAction;           // 死亡アクション
+    private DieAction _dieAction;           // 死亡アクション
     private Ability _abiliry;         // 能力
     private bool _isAlly = true;
     private CharacterAction _action;    // 行動
@@ -55,6 +56,8 @@ public class Character : MonoBehaviour
     private int _beforeHp = 0;          // 直前のHP
     private bool _isAttack = false;     // 攻撃判定を出したフラグ
     private bool _isKnockBack = false;  // ノックバック予定フラグ
+    private float _vecX = 0f;
+    private int _counter = 0;
     private Func<List<Character>> _getTargetCharacterListFunc = default;
     // ---------- クラス変数宣言 ----------
     // ---------- インスタンス変数宣言 ----------
@@ -79,6 +82,29 @@ public class Character : MonoBehaviour
         {
             ChangeAction(CharacterAction.stand);
         });
+        _AnimationEvents.SetOnDamageEnd(()=>
+        {
+            if(0 < _hp)
+                ChangeAction(CharacterAction.stand);
+            else
+            {
+                // 死亡
+                Destroy(this.gameObject);
+            }
+        });
+    }
+
+    private void FixedUpdate()
+    {
+        // ノックバック
+        if(_action == CharacterAction.damage && _vecX < 0)
+        {
+            if(_isAlly)
+                transform.Translate(_vecX, 0, 0);
+            else
+                transform.Translate(-_vecX, 0, 0);
+            _vecX += KNOCK_BACK_ADD_X * AWAY_CORRECTION;
+        }
     }
     // ---------- Public関数 ----------
     //　セットアップ
@@ -98,7 +124,8 @@ public class Character : MonoBehaviour
         }
 
         // テクスチャ更新
-        _overrideSprite.overrideTexture = _characterData.texture;
+        if(_characterData.texture != null)
+            _overrideSprite.overrideTexture = _characterData.texture;
         // 敵味方フラグ
         _isAlly = isAlly;
         
@@ -167,6 +194,7 @@ public class Character : MonoBehaviour
                 break;
             case CharacterAction.damage:
                 _animator.SetBool("Damage", true);
+                _vecX = KNOCK_BACK_VEC_X * AWAY_CORRECTION;
                 break;
             case CharacterAction.run:
                 _animator.SetBool("Run", true);
@@ -206,12 +234,14 @@ public class Character : MonoBehaviour
     public int GetHP(){ return _hp; }
     //  HP更新
     public void SetHP(int hp){ _hp = hp; }
+    //  最大HPを返す
+    public int GetMaxHP(){ return _maxHp; }
     //  攻撃力を返す
     public int GetAtk(){ return _atk; }
     // 「ダメージを受けたフラグ」更新
     public void SetIsDamage(bool isDamage){ _isDamage = isDamage; }
     // 「ダメージを受けたフラグ」を返す
-    public bool GetIsDamage(){ return _isDamage; }
+    public bool IsDamage(){ return _isDamage; }
     // 相手キャラクターのテーブルを返す
     public List<Character> GetTargetTable(){ return _getTargetCharacterListFunc(); }
     public void SetGetTargetCharacterListFunc(Func<List<Character>> func)
@@ -234,6 +264,9 @@ public class Character : MonoBehaviour
     public CharacterShot GetShot(){ return _shot_flg;}
     public bool IsKnockBack(){ return _isKnockBack; }
     public void SetIsKnockBack(bool isKnockBack){ _isKnockBack = isKnockBack; }
+    public int GetKbNum(){ return _kbNum; }
+    public int GetKbNumCounter(){ return _kbNumCounter; }
+    public void SetKbNumCounter(int kbNumCounter){ _kbNumCounter = kbNumCounter; }
     // 弾発射
     public void FireShot()
     {

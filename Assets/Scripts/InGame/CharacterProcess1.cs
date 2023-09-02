@@ -125,7 +125,5 @@ public class CharacterProcess1 : MonoBehaviour
 
         // 「直前のHP」更新
         character.UpdateBeforeHP();
-        // 「ダメージを受けたフラグ」更新
-        character.SetIsDamage(false);
     }
 }
