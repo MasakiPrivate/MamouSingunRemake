@@ -14,6 +14,8 @@ public class InGameManager : MonoBehaviour
     [SerializeField, Tooltip("キャラクタープレハブ")] private Character _characterPrefab;
     [SerializeField, Tooltip("キャラクターデータ")] private CharacterData _characterData;
     [SerializeField, Tooltip("戦場")] private Transform _battleField;
+    [SerializeField, Tooltip("UIマネージャー")] private InGameUIManager _inGameUIManager;
+    [SerializeField, Tooltip("マナマネージャー")] private ManaManager _manaManager;
     // ---------- プロパティ ----------
     // ---------- クラス変数宣言 ----------
     public static InGameManager instance = new InGameManager();
@@ -32,6 +34,8 @@ public class InGameManager : MonoBehaviour
     public void Initialize()
     {
         RefreshCharacterList();
+        _inGameUIManager.Initialize();
+        _manaManager.Initialize();
         CreateCharacter(_characterData, true, -1);
         CreateCharacter(_characterData, false, -1);
     }
@@ -60,12 +64,20 @@ public class InGameManager : MonoBehaviour
             character.transform.Translate(ALLY_CHARACTER_START_POS_X, 0, 0);    // 初期位置設定
             character.SetGetTargetCharacterListFunc(()=>{ return _enemyCharacterList; }); // 敵テーブルを返す
             _allyCharacterList.Add(character);                                  // 味方テーブルに登録
+            character.SetOnCharacterDead((value)=>
+            {
+                _allyCharacterList.Remove(value);
+            });
         }
         else
         {
             character.transform.Translate(ENEMY_CHARACTER_START_POS_X, 0, 0);    // 初期位置設定
             character.SetGetTargetCharacterListFunc(()=>{ return _allyCharacterList; }); // 味方テーブルを返す
-            _enemyCharacterList.Add(character);                                  // 敵テーブルに登録
+            _enemyCharacterList.Add(character);  
+            character.SetOnCharacterDead((value)=>
+            {
+                _enemyCharacterList.Remove(value);
+            });                                // 敵テーブルに登録
         }
     }
 

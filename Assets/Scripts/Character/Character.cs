@@ -59,6 +59,7 @@ public class Character : MonoBehaviour
     private float _vecX = 0f;
     private int _counter = 0;
     private Func<List<Character>> _getTargetCharacterListFunc = default;
+    private Action<Character> _onCharacterDead = default;
     // ---------- クラス変数宣言 ----------
     // ---------- インスタンス変数宣言 ----------
     // ---------- Unity組込関数 ----------
@@ -67,29 +68,45 @@ public class Character : MonoBehaviour
         if(_isInitialize)
             SetUp(_characterData, _isAlly, 0);
 
+        // 攻撃モーション：２段攻撃キャラクターの攻撃判定発生
         _AnimationEvents.SetOnDoudleAttack(()=>
         {
             if(_isDoubleAtk)
                 _isAttack = true;
         });
+        // 攻撃モーション：攻撃判定発生
         _AnimationEvents.SetOnAttack(()=>
         {
-            // 攻撃！
             _isAttack = true;
             _atkCoolTImeCounter = _atkCoolTIme;
         });
+        // 攻撃モーション：攻撃終了処理
         _AnimationEvents.SetOnAttackEnd(()=>
         {
             ChangeAction(CharacterAction.stand);
         });
+        // ダメージモーション：モーション終了時の処理
         _AnimationEvents.SetOnDamageEnd(()=>
         {
             if(0 < _hp)
-                ChangeAction(CharacterAction.stand);
+                ChangeAction(CharacterAction.walk);
             else
             {
+                // キャラクター死亡処理
+                _onCharacterDead?.Invoke(this);
                 // 死亡
-                Destroy(this.gameObject);
+                switch(_dieAction)
+                {
+                    case DieAction.vanish:
+                        ChangeAction(CharacterAction.vanish);
+                        break;
+                    case DieAction.run:
+                        ChangeAction(CharacterAction.run);
+                        break;
+                    case DieAction.dead:
+                        ChangeAction(CharacterAction.dead);
+                        break;
+                }
             }
         });
     }
@@ -104,6 +121,14 @@ public class Character : MonoBehaviour
             else
                 transform.Translate(-_vecX, 0, 0);
             _vecX += KNOCK_BACK_ADD_X * AWAY_CORRECTION;
+        }
+  
+        if(_action == CharacterAction.run )
+        {
+            // 画面外へ行った判定
+            bool isOut = true;
+            if(isOut)
+                CharacterVanish();
         }
     }
     // ---------- Public関数 ----------
@@ -197,6 +222,9 @@ public class Character : MonoBehaviour
                 _vecX = KNOCK_BACK_VEC_X * AWAY_CORRECTION;
                 break;
             case CharacterAction.run:
+                Vector3 scaleX = transform.localScale;
+                scaleX.x *= -1f;
+                transform.localScale = scaleX;
                 _animator.SetBool("Run", true);
                 break;
             case CharacterAction.dead:
@@ -204,7 +232,7 @@ public class Character : MonoBehaviour
                 break;
             //　死んで消えるアクション
             case CharacterAction.vanish:
-                _animator.SetBool("Damage", true);
+                CharacterVanish();
                 break;
         }
     }
@@ -303,6 +331,16 @@ public class Character : MonoBehaviour
                 return false;
         }
     }
+    // 消失時のコールバック設定
+    public void SetOnCharacterDead(Action<Character> action)
+    {
+        _onCharacterDead = action;
+    }
     // ---------- Private関数 ----------
+    // キャラクターの消滅処理
+    private void CharacterVanish()
+    {
+        Destroy(this.gameObject);
+    }
     // ---------- protected関数 ----------
 }
